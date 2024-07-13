@@ -1,8 +1,5 @@
 function Auditor(mongoClientObject, auditSchema) {
-  console.log("Hitting above block");
   return (req, res, next) => {
-    console.log("Hitting bottom block");
-
     const userAgent = req.headers["user-agent"];
     const ipAddress =
       req.headers["x-forwarded-for"] || req.socket.remoteAddress;
@@ -22,8 +19,7 @@ function Auditor(mongoClientObject, auditSchema) {
         createdAt: new Date(),
       };
 
-      console.log("auditData: ", auditData);
-      //   mongoClientObject.insertOne(auditData);
+      mongoClientObject.insertOne(auditData);
       // call the original res.send method
       originalSend.apply(res, arguments);
     };
