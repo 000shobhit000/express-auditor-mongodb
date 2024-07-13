@@ -1,0 +1,25 @@
+{
+  "name": "express-auditor-mongodb",
+  "version": "1.0.0",
+  "description": "An auditor for express.js which stores data in mongodb",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "auditor",
+    "mongodb",
+    "middleware",
+    "express",
+    "request",
+    "response",
+    "store"
+  ],
+  "author": "000shobhit000",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0"
+  }
+}
